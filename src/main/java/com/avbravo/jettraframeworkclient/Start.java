@@ -5,14 +5,13 @@
 package com.avbravo.jettraframeworkclient;
 
 import com.avbravo.jettraframework.JettraFramework;
+import com.avbravo.jettraframework.config.JettraConfig;
 import com.avbravo.jettraframework.controller.UserHandler;
 import com.avbravo.jettraframework.enumerations.Protocol;
 import com.avbravo.jettraframework.model.JettraContext;
+import com.avbravo.jettraframeworkclient.microprofileconfig.LeerPropiedad;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-import javax.swing.text.TableView;
 
 /**
  *
@@ -22,7 +21,13 @@ public class Start {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
+        //Lee el archivo microprofile config
         
+
+         
+      LeerPropiedad leerPropiedad = new LeerPropiedad();
+      leerPropiedad.leerpropiedad("mongodb.uri");
+      
         List<JettraContext> jettraContexts = new ArrayList<>();
         jettraContexts.add(new JettraContext("/users", new UserHandler()));
         jettraContexts.add(new JettraContext("/users/", new UserHandler()));
