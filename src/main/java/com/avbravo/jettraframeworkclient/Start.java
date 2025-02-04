@@ -5,7 +5,8 @@
 package com.avbravo.jettraframeworkclient;
 
 import com.avbravo.jettraframework.JettraFramework;
-import com.avbravo.jettraframework.config.JettraConfig;
+import com.avbravo.jettraframework.annotation.Car;
+import com.avbravo.jettraframework.annotation.CarBuilder;
 import com.avbravo.jettraframework.controller.UserHandler;
 import com.avbravo.jettraframework.enumerations.Protocol;
 import com.avbravo.jettraframework.model.JettraContext;
